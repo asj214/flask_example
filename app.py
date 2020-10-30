@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
-from extensions import db, migrate
+from extensions import db, migrate, jwt
 from applications import user
 
 
@@ -20,16 +20,17 @@ def create_app():
         os.getenv('DB_NAME')
     )
     app.config['SQLALCHEMY_ECHO'] = True
+    app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY')  # Change this!
+    app.config['JWT_TOKEN_LOCATION'] = ['headers'] # headers', 'cookies', 'query_string', 'json'
     db.init_app(app)
     migrate.init_app(app, db)
-
+    jwt.init_app(app)
     register_blueprints(app)
-
     return app
 
 def register_blueprints(app):
     app.register_blueprint(user.web.blueprint)
-
+    app.register_blueprint(user.api.blueprint)
 
 app = create_app()
 

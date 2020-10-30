@@ -19,7 +19,10 @@ orator 모듈의 생명이 끝난듯 하여 별수 없이 sqlalchemy를 사용�
 - Flask-WTF  
 - Flask-Script  
 - Flask-Migrate  
+- flask-apispec  
 - Flask-SQLAlchemy  
+- Flask-JWT-Extended  
+- flasgger  
 - mysqlclient  
 - python-dotenv  
 - email-validator  

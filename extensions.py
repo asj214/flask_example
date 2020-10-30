@@ -1,4 +1,5 @@
 from flask_migrate import Migrate
+from flask_jwt_extended import JWTManager
 from flask_sqlalchemy import SQLAlchemy, Model
 
 
@@ -31,3 +32,4 @@ class CRUDMixin(Model):
 
 db = SQLAlchemy(model_class=CRUDMixin)
 migrate = Migrate()
+jwt = JWTManager()
