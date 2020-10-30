@@ -9,12 +9,22 @@ orator 모듈의 생명이 끝난듯 하여 별수 없이 sqlalchemy를 사용�
 
 ### 작업해야할 사항  
 1. soft delete 기능  
-2. api jwt 토큰 인증
+2. api jwt 토큰 인증  
+3. banner web/api 개발  
+4. swagger 붙이기  
 
 
 ### packages
-- flask
-- sqlalchemy
+- flask  
+- Flask-WTF  
+- Flask-Script  
+- Flask-Migrate  
+- Flask-SQLAlchemy  
+- mysqlclient  
+- python-dotenv  
+- email-validator  
+
+
 
 ### 초기 설정  
 1. 가상화: python -m venv .venv  
