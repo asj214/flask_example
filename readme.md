@@ -1,4 +1,16 @@
-# flask learn example
+# flask learn example  
+
+pythonanywhere.com 사이트에서 orator 모듈만 문제인지를 확인하기 위해서 만든 repository  
+파이썬 orm(django, sqlalchemy) 들은 relationship 설정이나, migrate 할때 after 기능 부재등으로 인하여   
+rails 나 laravel 에 비해서 불편한 점들이 있어서 orator를 사용했는데  
+orator 모듈의 생명이 끝난듯 하여 별수 없이 sqlalchemy를 사용해야할지도 모르겠다.  
+내가 많이 사용해보질 못해서 그런것일 수 도 있지만...  역시 좀 불편하다.  
+
+
+### 작업해야할 사항  
+1. soft delete 기능  
+2. api jwt 토큰 인증
+
 
 ### packages
 - flask
